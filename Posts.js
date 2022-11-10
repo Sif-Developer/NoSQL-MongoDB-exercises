@@ -325,7 +325,10 @@ db.Posts.find({username: "Ralf"})
 
 //? Seleccione todas las publicaciones 
 //? y haz que se muestren con la siguiente estructura: Título de la publicación: "title one"
-db.Posts.find({title:"6"}).count()
+db.Posts.find().forEach((doc)=> {
+  print("Titulo de la publicación: " + doc.title)
+  
+  })
 
 //? Busca por title 2 publicaciones
 
